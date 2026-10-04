@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Play, Sprout } from 'lucide-react';
+import { ArrowRight, Sprout } from 'lucide-react';
 
 interface AelineHeroSectionProps {
   onOpenEnquiry: () => void;
@@ -240,6 +240,7 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
                   display: 'block',
                 }}
               />
+              {/* Gradient lighting overlay */}
               <div
                 style={{
                   position: 'absolute',
@@ -247,48 +248,6 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
                   background: 'linear-gradient(90deg, rgba(23, 63, 43, 0.25) 0%, rgba(12, 41, 27, 0.52) 100%)',
                 }}
               />
-
-              {/* Center Play Button Pill */}
-              <button
-                onClick={onOpenEnquiry}
-                style={{
-                  position: 'absolute',
-                  top: '50%',
-                  left: '50%',
-                  transform: 'translate(-50%, -50%)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '0.65rem',
-                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                  backdropFilter: 'blur(10px)',
-                  border: '1px solid rgba(255, 255, 255, 0.85)',
-                  padding: '0.7rem 1.5rem',
-                  borderRadius: '9999px',
-                  cursor: 'pointer',
-                  boxShadow: '0 10px 30px rgba(12, 41, 27, 0.25)',
-                  color: '#0C291B',
-                  fontSize: '0.85rem',
-                  fontWeight: 750,
-                  zIndex: 2,
-                  transition: 'all 0.3s ease',
-                }}
-              >
-                <div
-                  style={{
-                    width: '28px',
-                    height: '28px',
-                    borderRadius: '50%',
-                    backgroundColor: '#0C291B',
-                    color: '#93C639',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <Play size={11} fill="#93C639" />
-                </div>
-                <span>Discover NAMO</span>
-              </button>
             </div>
 
             {/* 3 Floating Rounded Cards with Subtle Emerald Glassmorphism */}
