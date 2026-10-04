@@ -11,11 +11,11 @@ export const ProductShowcaseSection: React.FC<ProductShowcaseSectionProps> = ({
   const [activeCategory, setActiveCategory] = useState<string>('all');
 
   const categories = [
-    { id: 'all', label: 'All 11 Formulations' },
+    { id: 'all', label: 'All 10 Formulations' },
     { id: 'bio_inputs', label: 'Bio-Fertilizers & Algae Feed' },
     { id: 'oils', label: 'Cold-Pressed Native Oils' },
     { id: 'ghee_honey', label: 'Desi Cow Ghee & Wild Honey' },
-    { id: 'staples_grains', label: 'Jaggery, Chikki, Rice & Pulses' },
+    { id: 'staples_grains', label: 'Organic Jaggery, Rice & Pulses' },
     { id: 'spices_nuts', label: 'Organic Spices & Dry Fruits' },
   ];
 
@@ -116,7 +116,7 @@ export const ProductShowcaseSection: React.FC<ProductShowcaseSectionProps> = ({
         '100% chemical-free and unbleached',
         'Rich natural source of dietary iron & potassium',
         'Healthy unrefined alternative to white sugar',
-        'Dissolves easily in tea, milk, and traditional sweets',
+        'Dissolves easily in tea, milk, and traditional recipes',
       ],
       image: '/assets/namo-organic-jaggery-powder.png',
       badge: 'IRON RICH',
@@ -189,23 +189,6 @@ export const ProductShowcaseSection: React.FC<ProductShowcaseSectionProps> = ({
       image: '/assets/namo-dryfruits-nuts.png',
       badge: 'GRADE-A CRUNCH',
       suitableFor: 'Daily Health Snack, Breakfasts & Festive Gifting',
-    },
-    {
-      id: 'chikki_candies',
-      category: 'staples_grains',
-      categoryLabel: 'TRADITIONAL SWEETS & CANDIES',
-      name: 'NAMO Traditional Jaggery Peanut Chikki & Sesame Candies',
-      tagline: 'Authentic Kovilpatti Kadalai Mittai & Pure Til (Sesame) Candies',
-      desc: 'Heritage South Indian peanut chikki and black sesame (til) candies made using pure unrefined organic sugarcane jaggery and freshly roasted peanuts. Packed with natural plant iron, wholesome fats, and crunchy energy with zero white sugar.',
-      features: [
-        '100% pure sugarcane jaggery, zero refined sugar',
-        'Traditional Kovilpatti artisan recipe & crisp snap',
-        'Rich in natural iron, proteins, and healthy fatty acids',
-        'Zero artificial color, glucose syrup, or preservatives',
-      ],
-      image: '/assets/namo-traditional-jaggery-chikki-candies.png',
-      badge: 'ZERO REFINED SUGAR',
-      suitableFor: 'Healthy Family Snacking, Children Nutrition & Festive Gifting',
     },
   ];
 

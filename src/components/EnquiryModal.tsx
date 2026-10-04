@@ -386,9 +386,6 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                           <option value="NAMO Organic Jaggery Powder">
                             NAMO Organic Jaggery Powder (Iron-Rich)
                           </option>
-                          <option value="NAMO Traditional Jaggery Peanut Chikki & Sesame Candies">
-                            NAMO Traditional Jaggery Peanut Chikki &amp; Sesame Candies
-                          </option>
                           <option value="NAMO Organic Pulses & Dals">
                             NAMO Organic Pulses &amp; Dals (Chemical-Free)
                           </option>

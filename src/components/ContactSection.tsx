@@ -383,7 +383,6 @@ export const ContactSection: React.FC = () => {
                     <option value="NAMO Desi Cow Ghee (A2 Bilona)">NAMO Desi Cow Ghee (A2 Bilona)</option>
                     <option value="NAMO Pure Wild Honey (Raw & Unprocessed)">NAMO Pure Wild Honey (Raw &amp; Unprocessed)</option>
                     <option value="NAMO Organic Jaggery Powder (Iron-Rich)">NAMO Organic Jaggery Powder (Iron-Rich)</option>
-                    <option value="NAMO Traditional Jaggery Peanut Chikki & Sesame Candies">NAMO Traditional Jaggery Peanut Chikki &amp; Sesame Candies</option>
                     <option value="NAMO Organic Pulses & Dals (Chemical-Free)">NAMO Organic Pulses &amp; Dals (Chemical-Free)</option>
                     <option value="NAMO Heritage Rice & Whole Wheat Grains">NAMO Heritage Rice &amp; Whole Wheat Grains</option>
                     <option value="NAMO Organic Whole Spices & Powders">NAMO Organic Whole Spices &amp; Powders</option>

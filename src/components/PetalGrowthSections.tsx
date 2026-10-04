@@ -119,15 +119,6 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
       image: '/assets/namo-dryfruits-nuts.png',
       desc: 'Carefully sorted and handpicked premium quality organic almonds, rich buttery cashews, and sun-dried golden raisins packed with natural energy and heart-healthy fats.',
     },
-    {
-      id: 11,
-      name: 'NAMO Traditional Jaggery Peanut Chikki & Sesame Candies',
-      category: 'Organic Jaggery & Sweeteners',
-      tag: 'Pure Cane Jaggery • Crunchy Peanuts • Black Sesame (Til) • Kovilpatti Recipe',
-      badge: 'Zero Refined Sugar',
-      image: '/assets/namo-traditional-jaggery-chikki-candies.png',
-      desc: 'Authentic Indian traditional peanut chikki and black sesame (til) candies crafted with 100% natural organic sugarcane jaggery and freshly roasted nuts. Wholesome, iron-packed, and completely free from white sugar and glucose syrups.',
-    },
   ];
 
   const filteredProducts =
@@ -277,7 +268,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
                     whiteSpace: 'nowrap',
                   }}
                 >
-                  11 Certified Formulations
+                  10 Certified Formulations
                 </span>
               </div>
             </div>
@@ -345,7 +336,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
               >
                 <div>
                   <div className="font-display" style={{ fontSize: '1.4rem', fontWeight: 800, color: '#FFFFFF', lineHeight: 1 }}>
-                    11 Pure Formulations
+                    10 Pure Formulations
                   </div>
                   <div style={{ fontSize: '0.75rem', color: '#D6EC9C', marginTop: '0.35rem', lineHeight: 1.4 }}>
                     From certified organic bio-inputs to wholesome farm-to-table kitchen nutrition.

@@ -684,63 +684,8 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
-    "id": "sweets-snacks",
-    "numericId": "11",
-    "name": "Traditional Sweets & Snacks",
-    "shortName": "Sweets & Snacks",
-    "category": "nuts",
-    "categoryLabel": "Nutritious Snacks & Dry Fruits",
-    "subtitle": "What celebrations tasted like before shortcuts.",
-    "image": "/products/sweets.jpg",
-    "tagline": "What celebrations tasted like before shortcuts.",
-    "subheadline": "Heritage recipes made with certified organic ingredients — jaggery, organic ghee, and native grains. Guilt-free indulgence rooted in India's oldest culinary traditions.",
-    "description": "Heritage recipes made with certified organic ingredients — jaggery, organic ghee, and native grains. Guilt-free indulgence rooted in India's oldest culinary traditions.",
-    "story": "Festival sweets in India have a long history of adulteration — substandard ghee, bleached sugar, synthetic colours, and artificial flavours. NAMO's traditional sweets are made from the same certified organic inputs that we sell individually: our own cold-pressed ghee, sulphur-free jaggery, and stone-ground flours. Every ingredient in the sweet is traceable to its source. The result is a product that tastes the way these sweets were always supposed to taste — before cost-cutting became the industry norm.",
-    "highlights": [
-      "Heritage recipes — unchanged for generations",
-      "Made with certified organic jaggery, ghee, and native grains",
-      "No refined sugar, no artificial colour, no preservatives",
-      "Small-batch production — freshness guaranteed",
-      "NAMO's most gifted product for festivals and celebrations"
-    ],
-    "volume": "1kg / 5kg",
-    "availableSizes": [
-      "Standard Farm Pack",
-      "Bulk / Institutional Pack"
-    ],
-    "price": "Coming Soon",
-    "priceNum": 0,
-    "mrp": "Certified Organic",
-    "mrpNum": 0,
-    "status": "Coming Soon",
-    "badge": "Most Gifted",
-    "origin": "Tamil Nadu & South India Certified Clusters",
-    "farmerGroup": "NAMO Organic Farmers Network",
-    "method": "Traditional Chemical-Free Processing",
-    "batchCode": "NAMO-TS-2026",
-    "harvestDate": "Seasonal Harvest 2026",
-    "shelfLife": "9 Months from packing",
-    "rating": 5,
-    "reviewCount": 150,
-    "nutrition": {
-      "servingSize": "30g",
-      "energy": "140 kcal",
-      "protein": "3.1g",
-      "carbs": "18g",
-      "fat": "6.5g",
-      "keyNutrient": "Natural Jaggery Molasses & Cultured Ghee Fats"
-    },
-    "purityTests": [
-      "ISO 9001:2015 Quality Management Certified",
-      "GeM Registered for Institutional Procurement",
-      "FSSAI Licensed (100% Chemical & Pesticide Free)",
-      "Zero Hexane, Solvents, or Chemical Bleaches",
-      "Panchakavya-Nurtured Natural Farm Origin"
-    ]
-  },
-  {
     "id": "panchakavya-organic-fertilizer",
-    "numericId": "12",
+    "numericId": "11",
     "name": "NAMO Organic Fertilizers Based on Panchakavya",
     "shortName": "Organic Fertilizer",
     "category": "fertilizers",
