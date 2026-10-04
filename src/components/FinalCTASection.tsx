@@ -17,22 +17,23 @@ export const FinalCTASection: React.FC<FinalCTASectionProps> = ({ onOpenEnquiry 
         backgroundColor: '#0C291B',
       }}
     >
-      {/* Background Image with Dark Green Overlay */}
+      {/* Background Image with Lush Organic Atmospheric Overlay */}
       <div
         style={{
           position: 'absolute',
           inset: 0,
           backgroundImage: 'url(/assets/sunset-farm.jpg)',
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          opacity: 0.22,
+          backgroundPosition: 'center 45%',
+          opacity: 0.65,
+          transform: 'scale(1.03)',
         }}
       />
       <div
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(180deg, rgba(12, 41, 27, 0.88) 0%, rgba(12, 41, 27, 0.98) 100%)',
+          background: 'radial-gradient(ellipse at 50% 35%, rgba(147, 198, 57, 0.12) 0%, rgba(12, 41, 27, 0.6) 55%, rgba(6, 22, 14, 0.92) 100%), linear-gradient(180deg, rgba(12, 41, 27, 0.75) 0%, rgba(12, 41, 27, 0.4) 50%, rgba(6, 22, 14, 0.92) 100%)',
         }}
       />
 
