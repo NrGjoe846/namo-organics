@@ -70,6 +70,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({
 
         {/* Main 2-Column Editorial Card */}
         <div
+          className="founder-main-card"
           style={{
             backgroundColor: '#FFFFFF',
             borderRadius: '36px',
@@ -77,81 +78,95 @@ export const FounderSection: React.FC<FounderSectionProps> = ({
             boxShadow: '0 25px 60px -15px rgba(12, 41, 27, 0.08)',
             overflow: 'hidden',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: '1fr 1.05fr',
             gap: 0,
           }}
         >
-          {/* Left Column: Visual Portrait & Heritage Badges */}
+          {/* Left Column: Visual Portrait Frame & Dedicated Credentials Card */}
           <div
+            className="founder-left-col"
             style={{
-              position: 'relative',
-              minHeight: '520px',
-              backgroundColor: '#0C291B',
-              overflow: 'hidden',
+              padding: 'clamp(1.25rem, 2.5vw, 2rem)',
+              backgroundColor: '#F7F5EF',
               display: 'flex',
               flexDirection: 'column',
-              justifyContent: 'flex-end',
-              padding: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              gap: '1.25rem',
             }}
           >
-            {/* Background Image of Authentic Founder */}
-            <img
-              src="/assets/namo-founder.jpg"
-              alt="Fathima Ali - Founder & Managing Director, Natural Agriculture & Modern Organic Private Limited"
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                objectPosition: 'center 15%',
-                zIndex: 0,
-                transition: 'transform 0.7s ease',
-              }}
-            />
+            {/* Dedicated Photo Container — 100% Unobstructed Founder Image */}
             <div
+              className="founder-portrait-frame"
               style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(180deg, rgba(12, 41, 27, 0.08) 0%, rgba(12, 41, 27, 0.2) 45%, rgba(12, 41, 27, 0.92) 90%)',
-                zIndex: 1,
-              }}
-            />
-
-            {/* Top Floating Badge */}
-            <div
-              style={{
-                position: 'absolute',
-                top: '1.75rem',
-                left: '1.75rem',
-                backgroundColor: 'rgba(255, 255, 255, 0.94)',
-                backdropFilter: 'blur(10px)',
-                padding: '0.55rem 1.25rem',
-                borderRadius: '9999px',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                fontSize: '0.75rem',
-                fontWeight: 800,
-                color: '#0C291B',
-                boxShadow: '0 8px 24px rgba(0,0,0,0.18)',
-                zIndex: 2,
+                position: 'relative',
+                borderRadius: '26px',
+                overflow: 'hidden',
+                height: 'clamp(340px, 38vw, 440px)',
+                backgroundColor: '#0C291B',
+                boxShadow: '0 12px 30px rgba(12, 41, 27, 0.12)',
               }}
             >
-              <Award size={15} color="#3B7E48" />
-              <span>INDIGENOUS BIO-AGRICULTURE LEADERSHIP</span>
+              <img
+                src="/assets/namo-founder.jpg"
+                alt="Fathima Ali - Founder & Managing Director, Natural Agriculture & Modern Organic Private Limited"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center 12%',
+                  display: 'block',
+                  transition: 'transform 0.7s ease',
+                }}
+              />
+
+              {/* Floating Leadership Badge — Positioned at Top in Tapestry Margin Above Face */}
+              <div
+                className="founder-leadership-badge"
+                style={{
+                  position: 'absolute',
+                  top: '1rem',
+                  left: '1rem',
+                  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)',
+                  padding: '0.45rem 1.05rem',
+                  borderRadius: '9999px',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  fontSize: '0.72rem',
+                  fontWeight: 800,
+                  color: '#0C291B',
+                  boxShadow: '0 6px 18px rgba(0,0,0,0.12)',
+                  zIndex: 2,
+                  maxWidth: 'calc(100% - 2rem)',
+                }}
+              >
+                <Award size={14} color="#3B7E48" />
+                <span>INDIGENOUS BIO-AGRICULTURE LEADERSHIP</span>
+              </div>
             </div>
 
-            {/* Bottom Content on Image */}
-            <div style={{ position: 'relative', zIndex: 2, color: '#FFFFFF' }}>
+            {/* Dedicated Credentials & Stats Card — Cleanly Positioned Below Photo */}
+            <div
+              className="founder-credentials-card"
+              style={{
+                backgroundColor: '#0C291B',
+                borderRadius: '26px',
+                padding: 'clamp(1.35rem, 2.2vw, 1.85rem)',
+                color: '#FFFFFF',
+                boxShadow: '0 16px 36px rgba(12, 41, 27, 0.2)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '0.35rem',
+              }}
+            >
               <div
                 style={{
-                  fontSize: '0.78rem',
+                  fontSize: '0.75rem',
                   fontWeight: 800,
                   letterSpacing: '0.14em',
                   textTransform: 'uppercase',
                   color: '#93C639',
-                  marginBottom: '0.35rem',
                 }}
               >
                 FOUNDER &amp; MANAGING DIRECTOR
@@ -159,41 +174,50 @@ export const FounderSection: React.FC<FounderSectionProps> = ({
               <h3
                 className="font-display"
                 style={{
-                  fontSize: '1.95rem',
+                  fontSize: 'clamp(1.65rem, 2.4vw, 2.1rem)',
                   fontWeight: 800,
                   color: '#FFFFFF',
-                  marginBottom: '0.25rem',
                   letterSpacing: '-0.01em',
+                  margin: 0,
+                  lineHeight: 1.15,
                 }}
               >
                 Fathima Ali
               </h3>
-              <p style={{ color: '#E3EBE4', fontSize: '0.92rem', lineHeight: 1.5, opacity: 0.95 }}>
+              <p style={{ color: '#D3DFD5', fontSize: '0.86rem', lineHeight: 1.5, margin: 0 }}>
                 Natural Agriculture &amp; Modern Organic Private Limited
               </p>
 
-              {/* 3 Core Stats */}
+              {/* 3 Core Stats Row */}
               <div
+                className="founder-stats-grid"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(3, 1fr)',
                   gap: '0.75rem',
-                  marginTop: '1.75rem',
-                  paddingTop: '1.25rem',
+                  marginTop: '1.15rem',
+                  paddingTop: '1.15rem',
                   borderTop: '1px solid rgba(255, 255, 255, 0.15)',
+                  textAlign: 'center',
                 }}
               >
                 <div>
-                  <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#93C639' }}>100%</div>
-                  <div style={{ fontSize: '0.7rem', color: '#C9D4CA', textTransform: 'uppercase' }}>Chemical-Free</div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#93C639', lineHeight: 1.1 }}>100%</div>
+                  <div style={{ fontSize: '0.68rem', color: '#C9D4CA', textTransform: 'uppercase', fontWeight: 600, marginTop: '2px' }}>
+                    Chemical-Free
+                  </div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#93C639' }}>40%</div>
-                  <div style={{ fontSize: '0.7rem', color: '#C9D4CA', textTransform: 'uppercase' }}>Water Saved</div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#93C639', lineHeight: 1.1 }}>40%</div>
+                  <div style={{ fontSize: '0.68rem', color: '#C9D4CA', textTransform: 'uppercase', fontWeight: 600, marginTop: '2px' }}>
+                    Water Saved
+                  </div>
                 </div>
                 <div>
-                  <div style={{ fontSize: '1.35rem', fontWeight: 800, color: '#93C639' }}>5+</div>
-                  <div style={{ fontSize: '0.7rem', color: '#C9D4CA', textTransform: 'uppercase' }}>Cow Derivatives</div>
+                  <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#93C639', lineHeight: 1.1 }}>5+</div>
+                  <div style={{ fontSize: '0.68rem', color: '#C9D4CA', textTransform: 'uppercase', fontWeight: 600, marginTop: '2px' }}>
+                    Cow Derivatives
+                  </div>
                 </div>
               </div>
             </div>

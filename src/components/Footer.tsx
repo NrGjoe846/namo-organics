@@ -182,6 +182,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom Bar: Portals, Copyright, Back to Top */}
         <div
+          className="footer-bottom-bar"
           style={{
             borderTop: '1px solid rgba(255, 255, 255, 0.08)',
             paddingTop: '2rem',
@@ -282,10 +283,12 @@ export const Footer: React.FC = () => {
               backgroundColor: 'rgba(255, 255, 255, 0.08)',
               border: '1px solid rgba(255, 255, 255, 0.12)',
               color: '#FCFAF4',
-              padding: '0.45rem 1rem',
+              padding: '0.65rem 1.25rem',
+              minHeight: '44px',
               borderRadius: '9999px',
               cursor: 'pointer',
-              fontSize: '0.78rem',
+              fontSize: '0.82rem',
+              touchAction: 'manipulation',
             }}
           >
             <span>Back to top</span>

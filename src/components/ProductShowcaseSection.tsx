@@ -413,6 +413,7 @@ export const ProductShowcaseSection: React.FC<ProductShowcaseSectionProps> = ({
 
                 {/* Suitable For & CTA */}
                 <div
+                  className="product-showcase-actions"
                   style={{
                     display: 'flex',
                     alignItems: 'center',

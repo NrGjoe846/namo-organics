@@ -209,6 +209,7 @@ export const WhyNamoSection: React.FC = () => {
 
         {/* Natural Integrity Heritage Seal Banner */}
         <div
+          className="why-namo-heritage-banner"
           style={{
             backgroundColor: '#0C291B',
             borderRadius: '32px',
@@ -290,6 +291,7 @@ export const WhyNamoSection: React.FC = () => {
             </div>
 
             <div
+              className="why-namo-seal-badge"
               style={{
                 backgroundColor: 'rgba(255, 255, 255, 0.08)',
                 border: '1px solid rgba(255, 255, 255, 0.15)',

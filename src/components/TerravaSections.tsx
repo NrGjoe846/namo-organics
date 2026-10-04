@@ -207,6 +207,7 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               {/* Card 1: System-First Design */}
               <div
+                className="terrava-card"
                 style={{
                   backgroundColor: '#FFFFFF',
                   borderRadius: '24px',
@@ -228,10 +229,23 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
                   </p>
                   <button
                     onClick={onOpenEnquiry}
-                    style={{ background: 'none', border: 'none', fontSize: '0.78rem', fontWeight: 700, color: '#121E15', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', padding: 0 }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '0.84rem',
+                      fontWeight: 700,
+                      color: '#121E15',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      cursor: 'pointer',
+                      padding: '0.5rem 0',
+                      minHeight: '44px',
+                      touchAction: 'manipulation',
+                    }}
                   >
                     <span>Learn More</span>
-                    <ArrowUpRight size={13} />
+                    <ArrowUpRight size={14} />
                   </button>
                 </div>
                 <img
@@ -243,6 +257,7 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
 
               {/* Card 2: Built for Scale (Deep Green Card) */}
               <div
+                className="terrava-card"
                 style={{
                   backgroundColor: '#173F2B',
                   borderRadius: '24px',
@@ -264,10 +279,23 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
                   </p>
                   <button
                     onClick={onOpenEnquiry}
-                    style={{ background: 'none', border: 'none', fontSize: '0.78rem', fontWeight: 700, color: '#D6EC9C', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', padding: 0 }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '0.84rem',
+                      fontWeight: 700,
+                      color: '#D6EC9C',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      cursor: 'pointer',
+                      padding: '0.5rem 0',
+                      minHeight: '44px',
+                      touchAction: 'manipulation',
+                    }}
                   >
                     <span>Learn More</span>
-                    <ArrowUpRight size={13} />
+                    <ArrowUpRight size={14} />
                   </button>
                 </div>
                 <img
@@ -279,6 +307,7 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
 
               {/* Card 3: Long-Term Focus */}
               <div
+                className="terrava-card"
                 style={{
                   backgroundColor: '#FFFFFF',
                   borderRadius: '24px',
@@ -300,10 +329,23 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
                   </p>
                   <button
                     onClick={onOpenEnquiry}
-                    style={{ background: 'none', border: 'none', fontSize: '0.78rem', fontWeight: 700, color: '#121E15', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', padding: 0 }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '0.84rem',
+                      fontWeight: 700,
+                      color: '#121E15',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      cursor: 'pointer',
+                      padding: '0.5rem 0',
+                      minHeight: '44px',
+                      touchAction: 'manipulation',
+                    }}
                   >
                     <span>Learn More</span>
-                    <ArrowUpRight size={13} />
+                    <ArrowUpRight size={14} />
                   </button>
                 </div>
                 <img
@@ -360,6 +402,7 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
 
               {/* Sub-Card */}
               <div
+                className="terrava-card"
                 style={{
                   backgroundColor: '#F7F5EF',
                   borderRadius: '24px',
@@ -380,10 +423,23 @@ export const TerravaSections: React.FC<TerravaSectionsProps> = ({ onOpenEnquiry 
                   </p>
                   <button
                     onClick={onOpenEnquiry}
-                    style={{ background: 'none', border: 'none', fontSize: '0.78rem', fontWeight: 700, color: '#121E15', display: 'flex', alignItems: 'center', gap: '0.25rem', cursor: 'pointer', padding: 0 }}
+                    style={{
+                      background: 'none',
+                      border: 'none',
+                      fontSize: '0.84rem',
+                      fontWeight: 700,
+                      color: '#121E15',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      cursor: 'pointer',
+                      padding: '0.5rem 0',
+                      minHeight: '44px',
+                      touchAction: 'manipulation',
+                    }}
                   >
                     <span>Learn More</span>
-                    <ArrowUpRight size={13} />
+                    <ArrowUpRight size={14} />
                   </button>
                 </div>
                 <img

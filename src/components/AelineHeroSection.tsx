@@ -121,6 +121,7 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
 
             {/* CTA Action Buttons */}
             <div
+              className="aeline-hero-actions"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -236,7 +237,7 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
                 borderRadius: '36px',
                 overflow: 'hidden',
                 boxShadow: '0 24px 60px rgba(12, 41, 27, 0.2), 0 0 0 1px rgba(147, 198, 57, 0.3)',
-                minHeight: '460px',
+                minHeight: 'clamp(260px, 35vw, 460px)',
                 height: '100%',
                 maxHeight: '500px',
               }}
@@ -248,7 +249,7 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
                 style={{
                   width: '100%',
                   height: '100%',
-                  minHeight: '460px',
+                  minHeight: 'clamp(260px, 35vw, 460px)',
                   objectFit: 'cover',
                   display: 'block',
                 }}

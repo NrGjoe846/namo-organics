@@ -135,6 +135,7 @@ export const PanchakavyaSection: React.FC = () => {
 
         {/* 5-Ingredient Interactive Luxury Console */}
         <div
+          className="panchakavya-console"
           style={{
             backgroundColor: '#F7F5EF',
             border: '1px solid rgba(23, 63, 43, 0.12)',
@@ -240,6 +241,7 @@ export const PanchakavyaSection: React.FC = () => {
 
             {/* Right: Active Ingredient Card with Photography */}
             <div
+              className="panchakavya-detail-card"
               style={{
                 backgroundColor: '#FFFFFF',
                 borderRadius: '28px',
@@ -256,7 +258,7 @@ export const PanchakavyaSection: React.FC = () => {
             >
               {/* Top Row */}
               <div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.65rem', marginBottom: '1.25rem' }}>
                   <div className="aeline-tag">
                     <span style={{ fontWeight: 800 }}>Active Ingredient 0{activeIngredient + 1}</span>
                   </div>

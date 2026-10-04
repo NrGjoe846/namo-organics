@@ -136,6 +136,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
       <section style={{ padding: '2rem 0 4rem' }}>
         <div className="container-custom">
           <div
+            className="petal-hero-card"
             style={{
               position: 'relative',
               backgroundColor: '#0C291B',
@@ -349,7 +350,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
                 />
               </div>
 
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+              <div className="petal-hero-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <div
                   style={{
                     width: '44px',
@@ -360,6 +361,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
                     alignItems: 'center',
                     justifyContent: 'center',
                     color: '#FFFFFF',
+                    flexShrink: 0,
                   }}
                 >
                   <ArrowDown size={18} />
@@ -377,6 +379,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
                     fontWeight: 700,
                     cursor: 'pointer',
                     boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+                    touchAction: 'manipulation',
                   }}
                 >
                   Explore Full Catalog
@@ -549,19 +552,23 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
                       onClick={() => toggleFavorite(p.id)}
                       style={{
                         position: 'absolute',
-                        top: '1rem',
-                        left: '1rem',
-                        width: '32px',
-                        height: '32px',
+                        top: '0.85rem',
+                        left: '0.85rem',
+                        width: '40px',
+                        height: '40px',
+                        minWidth: '40px',
+                        minHeight: '40px',
                         borderRadius: '50%',
-                        backgroundColor: favorites.includes(p.id) ? '#3B7E48' : 'rgba(255,255,255,0.9)',
+                        backgroundColor: favorites.includes(p.id) ? '#3B7E48' : 'rgba(255,255,255,0.92)',
                         border: 'none',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
                         cursor: 'pointer',
-                        boxShadow: '0 2px 6px rgba(0,0,0,0.08)',
+                        boxShadow: '0 2px 6px rgba(0,0,0,0.1)',
                         transition: 'all 0.2s ease',
+                        touchAction: 'manipulation',
+                        zIndex: 2,
                       }}
                       aria-label="Save to Wishlist"
                     >

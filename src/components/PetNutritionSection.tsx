@@ -543,6 +543,7 @@ export const PetNutritionSection: React.FC<PetNutritionSectionProps> = ({
 
         {/* Section Trust Banner */}
         <div
+          className="pet-wholesale-banner"
           style={{
             marginTop: '4rem',
             backgroundColor: '#0C291B',
@@ -572,6 +573,7 @@ export const PetNutritionSection: React.FC<PetNutritionSectionProps> = ({
 
           <button
             onClick={() => handleEnquire('Pet Nutrition & Institutional Supply')}
+            className="pet-wholesale-btn"
             style={{
               padding: '0.85rem 1.8rem',
               backgroundColor: '#93C639',
@@ -586,7 +588,7 @@ export const PetNutritionSection: React.FC<PetNutritionSectionProps> = ({
               gap: '0.55rem',
               transition: 'all 0.25s ease',
               boxShadow: '0 6px 20px rgba(147, 198, 57, 0.3)',
-              whiteSpace: 'nowrap',
+              whiteSpace: 'normal',
             }}
           >
             <span>Request Pet Product Catalog</span>

@@ -85,6 +85,7 @@ export const BrandStatementSection: React.FC = () => {
           </p>
 
           <div
+            className="brand-statement-pill"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

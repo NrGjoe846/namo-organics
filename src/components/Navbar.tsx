@@ -53,6 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
   return (
     <>
       <header
+        className="navbar-header"
         style={{
           position: 'fixed',
           top: '1rem',
@@ -65,6 +66,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
       >
         <div className="container-custom" style={{ display: 'flex', justifyContent: 'center' }}>
           <div
+            className="navbar-pill"
             style={{
               width: '100%',
               maxWidth: '1240px',
@@ -207,13 +209,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                width: '42px',
-                height: '42px',
+                width: '44px',
+                height: '44px',
+                minWidth: '44px',
+                minHeight: '44px',
                 borderRadius: '50%',
                 backgroundColor: '#FFFFFF',
                 border: '1px solid rgba(23, 63, 43, 0.12)',
                 color: '#0C291B',
                 cursor: 'pointer',
+                touchAction: 'manipulation',
               }}
               className="lg:hidden"
               aria-label="Toggle Menu"
@@ -236,7 +241,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            padding: '6rem 2rem 2.5rem',
+            padding: '5.5rem 1.5rem 2rem',
+            overflowY: 'auto',
+            WebkitOverflowScrolling: 'touch',
+            maxHeight: '100dvh',
             animation: 'fadeIn 0.3s ease',
           }}
         >

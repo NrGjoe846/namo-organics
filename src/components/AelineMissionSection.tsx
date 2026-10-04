@@ -72,7 +72,10 @@ export const AelineMissionSection: React.FC<AelineMissionSectionProps> = ({ onOp
               Through biological innovation, direct farmer advisory, and Panchakavya-based inputs, we empower growers to heal their soils, protect genetic diversity, and build lasting rural prosperity.
             </p>
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginTop: '0.5rem' }}>
+            <div
+              className="aeline-mission-actions"
+              style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap', marginTop: '0.5rem' }}
+            >
               <button onClick={onOpenEnquiry} className="btn-aeline-green">
                 <span>Explore Solutions</span>
                 <ArrowRight size={15} />

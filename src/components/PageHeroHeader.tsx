@@ -19,6 +19,7 @@ export const PageHeroHeader: React.FC<PageHeroHeaderProps> = ({
 }) => {
   return (
     <section
+      className="page-hero-section"
       style={{
         position: 'relative',
         backgroundColor: '#0C291B',
