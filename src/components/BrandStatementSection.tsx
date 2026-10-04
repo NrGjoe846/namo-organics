@@ -3,11 +3,31 @@ import { Sparkles } from 'lucide-react';
 
 export const BrandStatementSection: React.FC = () => {
   const recognitions = [
-    { name: 'MSME', label: 'Micro, Small & Medium Enterprises' },
-    { name: 'FSSAI', label: 'Food Safety & Standards Authority' },
-    { name: 'GeM', label: 'Government e Marketplace' },
-    { name: 'APEDA', label: 'Agricultural Products Export Authority' },
-    { name: '#startupindia', label: 'Department for Promotion of Industry' },
+    {
+      name: 'MSME',
+      label: 'Ministry of Micro, Small & Medium Enterprises',
+      logo: '/assets/gov-msme-logo.webp',
+    },
+    {
+      name: 'FSSAI',
+      label: 'Food Safety and Standards Authority of India',
+      logo: '/assets/gov-fssai-logo.webp',
+    },
+    {
+      name: 'GeM',
+      label: 'Government e Marketplace',
+      logo: '/assets/gov-gem-logo.png',
+    },
+    {
+      name: 'APEDA',
+      label: 'Agricultural & Processed Food Products Export Authority',
+      logo: '/assets/gov-apeda-logo.png',
+    },
+    {
+      name: 'Startup India',
+      label: 'Department for Promotion of Industry & Internal Trade',
+      logo: '/assets/gov-startupindia-logo.png',
+    },
   ];
 
   return (
@@ -108,48 +128,72 @@ export const BrandStatementSection: React.FC = () => {
             GOVERNMENT & REGULATORY FRAMEWORKS REPRESENTED
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(5, 1fr)',
-              gap: '1.25rem',
-            }}
-            className="recognitions-grid"
-          >
+          <div className="recognitions-grid">
             {recognitions.map((item, idx) => (
               <div
                 key={idx}
+                className="recognition-card"
                 style={{
-                  padding: '1.25rem 1rem',
-                  borderRadius: '18px',
-                  backgroundColor: '#F7F5EF',
-                  border: '1px solid rgba(23, 63, 43, 0.08)',
+                  padding: '1.5rem 1.15rem',
+                  borderRadius: '20px',
+                  backgroundColor: '#FDFBF7',
+                  border: '1px solid rgba(23, 63, 43, 0.1)',
                   textAlign: 'center',
                   display: 'flex',
                   flexDirection: 'column',
                   alignItems: 'center',
-                  justifyContent: 'center',
+                  justifyContent: 'space-between',
+                  gap: '0.85rem',
+                  transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                  boxShadow: '0 2px 8px rgba(12, 41, 27, 0.03)',
+                  minHeight: '175px',
                 }}
               >
                 <div
                   style={{
-                    fontSize: '1.15rem',
-                    fontWeight: 800,
-                    color: '#0C291B',
-                    marginBottom: '0.35rem',
-                    letterSpacing: '-0.01em',
+                    height: '56px',
+                    width: '100%',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '0.2rem',
                   }}
                 >
-                  {item.name}
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                    style={{
+                      maxHeight: '50px',
+                      maxWidth: '120px',
+                      objectFit: 'contain',
+                      display: 'block',
+                    }}
+                  />
                 </div>
-                <div
-                  style={{
-                    fontSize: '0.72rem',
-                    color: '#667067',
-                    lineHeight: 1.35,
-                  }}
-                >
-                  {item.label}
+
+                <div>
+                  <div
+                    style={{
+                      fontSize: '0.92rem',
+                      fontWeight: 800,
+                      color: '#0C291B',
+                      marginBottom: '0.25rem',
+                      letterSpacing: '-0.01em',
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    {item.name}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: '0.72rem',
+                      color: '#5E7063',
+                      lineHeight: 1.35,
+                      fontWeight: 500,
+                    }}
+                  >
+                    {item.label}
+                  </div>
                 </div>
               </div>
             ))}
