@@ -304,10 +304,10 @@ export const WhyNamoPage: React.FC = () => {
                       borderRadius: '8px 8px 0 0',
                     }}
                   >
-                    🌱 NAMO ORGANIC CRAFT
+                    NAMO ORGANIC CRAFT
                   </th>
                   <th style={{ textAlign: 'left', padding: '1rem', color: '#8A5555', fontSize: '0.95rem' }}>
-                    ⚠️ COMMERCIAL PROCESSING
+                    COMMERCIAL PROCESSING
                   </th>
                 </tr>
               </thead>

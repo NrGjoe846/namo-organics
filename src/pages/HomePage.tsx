@@ -1,64 +1,83 @@
-import React from 'react';
-import { NamoParallaxHero } from '../components/NamoParallaxHero';
-import { NaturePreserved } from '../components/NaturePreserved';
-import { HorizontalJourney } from '../components/HorizontalJourney';
-import { ProductShowcase } from '../components/ProductShowcase';
-import { EditorialPantry } from '../components/EditorialPantry';
-import { WhyNamo } from '../components/WhyNamo';
-import { OurStory } from '../components/OurStory';
-import { FarmersSection } from '../components/FarmersSection';
-import { QualityPromise } from '../components/QualityPromise';
-import { FinalCTA } from '../components/FinalCTA';
+import React, { useState } from 'react';
+import { CustomCursor } from '../components/CustomCursor';
+import { Navbar } from '../components/Navbar';
+import { AelineHeroSection } from '../components/AelineHeroSection';
+import { AelineMissionSection } from '../components/AelineMissionSection';
+import { TerravaSections } from '../components/TerravaSections';
+import { PetalGrowthSections } from '../components/PetalGrowthSections';
+import { PanchakavyaSection } from '../components/PanchakavyaSection';
+import { FounderSection } from '../components/FounderSection';
+import { AelineInitiativesSection } from '../components/AelineInitiativesSection';
+import { FinalCTASection } from '../components/FinalCTASection';
+import { ContactSection } from '../components/ContactSection';
+import { Footer } from '../components/Footer';
+import { EnquiryModal } from '../components/EnquiryModal';
 
-interface HomePageProps {
-  onAddToCart: (productName: string, price: string) => void;
-  onOpenTraceabilityWithBatch: (batchCode: string) => void;
-  onOpenTraceability: () => void;
-}
+export const HomePage: React.FC = () => {
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
+  const [selectedProductForEnquiry, setSelectedProductForEnquiry] = useState<string>('Organic Fertilizers');
 
-export const HomePage: React.FC<HomePageProps> = ({
-  onAddToCart,
-  onOpenTraceabilityWithBatch,
-  onOpenTraceability,
-}) => {
+  const handleOpenEnquiryWithProduct = (productName: string) => {
+    setSelectedProductForEnquiry(productName);
+    setIsEnquiryModalOpen(true);
+  };
+
+  const handleOpenGeneralEnquiry = () => {
+    setSelectedProductForEnquiry('Organic Fertilizers');
+    setIsEnquiryModalOpen(true);
+  };
+
   return (
-    <main>
-      {/* 01: Full-Screen Cinematic Parallax Hero (Misty Mountain Sunrise Parallax -> Ivory Glow Logo -> Flying Logo -> Hero with Overlay Texts) */}
-      <NamoParallaxHero />
+    <div style={{ position: 'relative', width: '100%', minHeight: '100vh', backgroundColor: '#F7F5EF' }}>
+      {/* Subtle organic film grain texture overlay */}
+      <div className="film-grain" />
 
-      {/* 02: Nature, Preserved */}
-      <NaturePreserved />
+      {/* Custom Desktop Interactive Cursor & Scroll Progress Indicator */}
+      <CustomCursor />
 
-      {/* 08 & 09: Philosophy & Horizontal Farm to Family Journey */}
-      <HorizontalJourney />
+      {/* Floating Luxury Frosted Pill Navbar */}
+      <Navbar onOpenEnquiry={handleOpenGeneralEnquiry} />
 
-      {/* 10: Products Cinematic Showcase */}
-      <ProductShowcase
-        onAddToCart={handleAddToCart}
-        onOpenTraceabilityWithBatch={onOpenTraceabilityWithBatch}
+      <main>
+        {/* 01. REFERENCE A: HERO SECTION WITH IMAGE BACKGROUND & 4-STAT BAR */}
+        <AelineHeroSection onOpenEnquiry={handleOpenGeneralEnquiry} />
+
+        {/* 02. REFERENCE A: MISSION & 3 TALL VERTICAL PHOTOGRAPHIC CARDS */}
+        <AelineMissionSection onOpenEnquiry={handleOpenGeneralEnquiry} />
+
+        {/* 03. REFERENCE B: TERRAVA GREEN INFRASTRUCTURE & 3-CARD STACK */}
+        <TerravaSections onOpenEnquiry={handleOpenGeneralEnquiry} />
+
+        {/* 04. REFERENCE C: PETAL GROWTH DARK BOTANICAL & PRODUCT SHOWCASE */}
+        <PetalGrowthSections onOpenEnquiryWithProduct={handleOpenEnquiryWithProduct} />
+
+        {/* 05. PANCHAKAVYA 5-INGREDIENT COW-DERIVED SCIENCE & 40% WATER SAVING */}
+        <PanchakavyaSection />
+
+        {/* 06. FOUNDER'S VISION & LEADERSHIP PERSPECTIVE */}
+        <FounderSection onOpenEnquiry={handleOpenGeneralEnquiry} />
+
+        {/* 07. INITIATIVES & LIME ACCENT NEWSLETTER */}
+        <AelineInitiativesSection onOpenEnquiry={handleOpenGeneralEnquiry} />
+
+        {/* 08. FINAL CINEMATIC CALL TO ACTION */}
+        <FinalCTASection onOpenEnquiry={handleOpenGeneralEnquiry} />
+
+        {/* 09. CONTACT SECTION & QUICK ENQUIRY */}
+        <ContactSection />
+      </main>
+
+      {/* 09. LUXURY BOTANICAL FOOTER */}
+      <Footer />
+
+      {/* Global Interactive Quick Enquiry Modal */}
+      <EnquiryModal
+        isOpen={isEnquiryModalOpen}
+        onClose={() => setIsEnquiryModalOpen(false)}
+        defaultProduct={selectedProductForEnquiry}
       />
-
-      {/* 11 & 12: Dals & Pulses, Nuts & Dry Fruits Editorial Pantry */}
-      <EditorialPantry onAddToCart={handleAddToCart} />
-
-      {/* 13: Why NAMO (6 Immersive Visual Cards) */}
-      <WhyNamo />
-
-      {/* 14: Our Story — A Bridge Between Generations */}
-      <OurStory />
-
-      {/* 15: Farmers Section — The People Behind Every Product */}
-      <FarmersSection />
-
-      {/* 16: Quality Promise — Minimalist Cream Transition */}
-      <QualityPromise onOpenTraceability={onOpenTraceability} />
-
-      {/* 17: Final CTA — Golden Sunset Landscape */}
-      <FinalCTA />
-    </main>
+    </div>
   );
-
-  function handleAddToCart(name: string, price: string) {
-    onAddToCart(name, price);
-  }
 };
+
+export default HomePage;

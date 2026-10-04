@@ -300,7 +300,7 @@ export const JourneyPage: React.FC = () => {
               }}
             >
               <strong style={{ color: '#243810', fontSize: '0.88rem', display: 'block', marginBottom: '3px' }}>
-                🌾 {current.wisdomPillar}
+                {current.wisdomPillar}
               </strong>
               <p style={{ fontSize: '0.82rem', color: '#4E6E10', margin: 0 }}>
                 {current.pillarDesc}

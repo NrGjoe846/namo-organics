@@ -306,7 +306,7 @@ export const OurStoryPage: React.FC = () => {
                   fontWeight: 600,
                 }}
               >
-                🌾 <strong>Historical Legacy:</strong> {current.milestone}
+                <strong>Historical Legacy:</strong> {current.milestone}
               </div>
             </div>
           </div>
