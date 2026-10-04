@@ -188,7 +188,7 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Official Web Portals */}
+            {/* Other Initiatives Web Portal */}
             <div
               style={{
                 padding: '1.5rem',
@@ -198,7 +198,7 @@ export const ContactSection: React.FC = () => {
               }}
             >
               <div style={{ fontSize: '0.75rem', fontWeight: 800, color: '#93C639', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '0.65rem' }}>
-                OFFICIAL WEB PORTAL
+                VISIT OUR OTHER INITIATIVES
               </div>
               <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
                 <a
