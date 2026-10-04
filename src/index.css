@@ -1307,6 +1307,108 @@ textarea:focus-visible {
   }
 }
 
+/* ==========================================================================
+   PANCHAKAVYA BENEFITS & INGREDIENTS HOVER EFFECTS
+   ========================================================================== */
+.panchakavya-ingredient-btn {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.panchakavya-ingredient-btn:not(.is-active):hover {
+  transform: translateX(4px) !important;
+  background-color: #F6FAF4 !important;
+  border-color: rgba(59, 126, 72, 0.25) !important;
+  box-shadow: 0 8px 18px -4px rgba(23, 63, 43, 0.08) !important;
+}
+
+.panchakavya-benefit-card {
+  position: relative;
+  transition: all 0.38s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.panchakavya-benefit-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #93C639 0%, #3B7E48 100%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 2;
+}
+
+.panchakavya-benefit-card:hover {
+  transform: translateY(-8px) scale(1.01);
+}
+
+.panchakavya-benefit-card.card-highlight:hover {
+  box-shadow: 0 26px 50px -10px rgba(12, 41, 27, 0.55), 0 0 0 1px rgba(147, 198, 57, 0.5) !important;
+  border-color: rgba(147, 198, 57, 0.5) !important;
+}
+
+.panchakavya-benefit-card.card-standard:hover {
+  box-shadow: 0 24px 48px -10px rgba(12, 41, 27, 0.14), 0 0 0 1px rgba(59, 126, 72, 0.35) !important;
+  border-color: rgba(59, 126, 72, 0.4) !important;
+  background-color: #FAFCF9 !important;
+}
+
+.panchakavya-benefit-card:hover::before {
+  opacity: 1;
+}
+
+.panchakavya-benefit-card .benefit-icon-box {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panchakavya-benefit-card:hover .benefit-icon-box {
+  transform: scale(1.14) rotate(6deg);
+}
+
+.panchakavya-benefit-card.card-highlight:hover .benefit-icon-box {
+  background-color: rgba(147, 198, 57, 0.3) !important;
+  box-shadow: 0 0 20px rgba(147, 198, 57, 0.3);
+}
+
+.panchakavya-benefit-card.card-standard:hover .benefit-icon-box {
+  background-color: rgba(59, 126, 72, 0.18) !important;
+  box-shadow: 0 6px 18px rgba(59, 126, 72, 0.2);
+}
+
+.panchakavya-benefit-card .benefit-stat-num {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), text-shadow 0.3s ease;
+}
+
+.panchakavya-benefit-card:hover .benefit-stat-num {
+  transform: scale(1.04);
+  transform-origin: left center;
+}
+
+.panchakavya-benefit-card.card-highlight:hover .benefit-stat-num {
+  text-shadow: 0 0 20px rgba(147, 198, 57, 0.4);
+}
+
+.panchakavya-benefit-card .benefit-tag-pill {
+  transition: all 0.3s ease;
+}
+
+.panchakavya-benefit-card:hover .benefit-tag-pill {
+  transform: translateY(-2px);
+}
+
+.panchakavya-benefit-card.card-highlight:hover .benefit-tag-pill {
+  background-color: rgba(147, 198, 57, 0.25) !important;
+  color: #A3D844 !important;
+}
+
+.panchakavya-benefit-card.card-standard:hover .benefit-tag-pill {
+  background-color: rgba(59, 126, 72, 0.14) !important;
+  color: #173F2B !important;
+}
+
 
 
 

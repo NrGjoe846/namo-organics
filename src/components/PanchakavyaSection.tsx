@@ -178,6 +178,7 @@ export const PanchakavyaSection: React.FC = () => {
                     <div
                       key={ing.name}
                       onClick={() => setActiveIngredient(idx)}
+                      className={`panchakavya-ingredient-btn ${isActive ? 'is-active' : ''}`}
                       style={{
                         padding: '1.15rem 1.4rem',
                         borderRadius: '20px',
@@ -185,7 +186,6 @@ export const PanchakavyaSection: React.FC = () => {
                         color: isActive ? '#FCFAF4' : '#121E15',
                         border: isActive ? '1px solid #0C291B' : '1px solid rgba(23, 63, 43, 0.08)',
                         cursor: 'pointer',
-                        transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'space-between',
@@ -396,6 +396,7 @@ export const PanchakavyaSection: React.FC = () => {
             return (
               <div
                 key={idx}
+                className={`panchakavya-benefit-card ${b.highlight ? 'card-highlight' : 'card-standard'}`}
                 style={{
                   backgroundColor: b.highlight ? '#0C291B' : '#FFFFFF',
                   color: b.highlight ? '#FFFFFF' : '#121E15',
@@ -408,7 +409,6 @@ export const PanchakavyaSection: React.FC = () => {
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  transition: 'transform 0.3s ease',
                   position: 'relative',
                 }}
               >
@@ -422,6 +422,7 @@ export const PanchakavyaSection: React.FC = () => {
                     }}
                   >
                     <div
+                      className="benefit-icon-box"
                       style={{
                         width: '42px',
                         height: '42px',
@@ -435,6 +436,7 @@ export const PanchakavyaSection: React.FC = () => {
                       <Icon size={20} color={b.highlight ? '#93C639' : '#3B7E48'} />
                     </div>
                     <span
+                      className="benefit-tag-pill"
                       style={{
                         fontSize: '0.72rem',
                         fontWeight: 700,
@@ -450,7 +452,7 @@ export const PanchakavyaSection: React.FC = () => {
                   </div>
 
                   <div
-                    className="font-display"
+                    className="font-display benefit-stat-num"
                     style={{
                       fontSize: '2.4rem',
                       fontWeight: 800,
