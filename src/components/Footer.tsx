@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Sparkles, ArrowUp } from 'lucide-react';
+import { Phone, Mail, MapPin, Sparkles, ArrowUp, ShieldCheck, Copy, Check } from 'lucide-react';
 
 export const Footer: React.FC = () => {
+  const [gemCopied, setGemCopied] = useState(false);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleCopyGem = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigator.clipboard.writeText('6DCK260014897157');
+    setGemCopied(true);
+    setTimeout(() => setGemCopied(false), 2200);
   };
 
   return (
@@ -176,6 +186,87 @@ export const Footer: React.FC = () => {
                   namoorganicpvtltd@gmail.com
                 </a>
               </div>
+
+              {/* GeM Seller Card in Column 4 */}
+              <div
+                style={{
+                  marginTop: '0.65rem',
+                  padding: '0.85rem 1rem',
+                  borderRadius: '12px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                  border: '1px solid rgba(147, 198, 57, 0.25)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.45rem',
+                  boxShadow: '0 4px 14px rgba(0, 0, 0, 0.12)',
+                }}
+              >
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem' }}>
+                    <ShieldCheck size={16} color="#93C639" />
+                    <span style={{ fontSize: '0.72rem', fontWeight: 800, color: '#FCFAF4', letterSpacing: '0.04em', textTransform: 'uppercase' }}>
+                      GeM Registered Seller
+                    </span>
+                  </div>
+                  <span
+                    style={{
+                      fontSize: '0.58rem',
+                      color: '#93C639',
+                      fontWeight: 700,
+                      backgroundColor: 'rgba(147, 198, 57, 0.15)',
+                      padding: '1px 6px',
+                      borderRadius: '9999px',
+                      border: '1px solid rgba(147, 198, 57, 0.3)',
+                    }}
+                  >
+                    Govt of India
+                  </span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '0.5rem' }}>
+                  <span
+                    style={{
+                      fontSize: '0.82rem',
+                      color: '#93C639',
+                      fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+                      fontWeight: 700,
+                      letterSpacing: '0.05em',
+                    }}
+                  >
+                    6DCK260014897157
+                  </span>
+                  <button
+                    onClick={handleCopyGem}
+                    style={{
+                      background: gemCopied ? 'rgba(147, 198, 57, 0.2)' : 'rgba(255, 255, 255, 0.06)',
+                      border: gemCopied ? '1px solid #93C639' : '1px solid rgba(255, 255, 255, 0.12)',
+                      padding: '3px 8px',
+                      borderRadius: '6px',
+                      cursor: 'pointer',
+                      color: gemCopied ? '#93C639' : '#C9D4CA',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                      fontSize: '0.7rem',
+                      fontWeight: 600,
+                      transition: 'all 0.2s ease',
+                      touchAction: 'manipulation',
+                    }}
+                    title="Copy GeM Seller ID"
+                  >
+                    {gemCopied ? (
+                      <>
+                        <Check size={12} color="#93C639" />
+                        <span>Copied</span>
+                      </>
+                    ) : (
+                      <>
+                        <Copy size={12} />
+                        <span>Copy</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -199,7 +290,126 @@ export const Footer: React.FC = () => {
             © {new Date().getFullYear()} Natural Agriculture &amp; Modern Organic Private Limited. All Rights Reserved.
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+          <div
+            className="footer-badges-group"
+            style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}
+          >
+            {/* GeM Seller Badge */}
+            <div
+              className="gem-seller-badge"
+              onClick={handleCopyGem}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  handleCopyGem(e as any);
+                }
+              }}
+              title="Click to copy official Government e-Marketplace (GeM) Seller ID"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '12px',
+                background: 'rgba(255, 255, 255, 0.06)',
+                borderRadius: '16px',
+                padding: '8px 18px',
+                textDecoration: 'none',
+                transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                border: '1px solid rgba(147, 198, 57, 0.28)',
+                boxShadow: '0 4px 15px rgba(0,0,0,0.15)',
+                cursor: 'pointer',
+                userSelect: 'none',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)';
+                e.currentTarget.style.borderColor = '#93C639';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.06)';
+                e.currentTarget.style.borderColor = 'rgba(147, 198, 57, 0.28)';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '2px', textAlign: 'left' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span
+                    style={{
+                      fontSize: '0.58rem',
+                      fontWeight: 700,
+                      color: '#93C639',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.14em',
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Govt e-Marketplace (GeM)
+                  </span>
+                  <span
+                    style={{
+                      fontSize: '0.52rem',
+                      fontWeight: 700,
+                      backgroundColor: 'rgba(147, 198, 57, 0.2)',
+                      color: '#93C639',
+                      padding: '1px 6px',
+                      borderRadius: '9999px',
+                      border: '1px solid rgba(147, 198, 57, 0.4)',
+                    }}
+                  >
+                    VERIFIED
+                  </span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <span
+                    style={{
+                      fontSize: '0.88rem',
+                      fontWeight: 700,
+                      letterSpacing: '0.04em',
+                      fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace',
+                      lineHeight: 1.1,
+                      color: '#FFFFFF',
+                    }}
+                  >
+                    ID: 6DCK260014897157
+                  </span>
+                  {gemCopied ? (
+                    <span
+                      style={{
+                        fontSize: '0.68rem',
+                        fontWeight: 700,
+                        color: '#93C639',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '2px',
+                      }}
+                    >
+                      <Check size={11} /> Copied!
+                    </span>
+                  ) : (
+                    <span style={{ display: 'inline-flex', alignItems: 'center', color: '#8CA090' }}>
+                      <Copy size={12} />
+                    </span>
+                  )}
+                </div>
+              </div>
+              <div
+                style={{
+                  width: '28px',
+                  height: '28px',
+                  borderRadius: '50%',
+                  background: 'rgba(147, 198, 57, 0.15)',
+                  border: '1px solid #93C639',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  color: '#93C639',
+                }}
+              >
+                <ShieldCheck size={16} />
+              </div>
+            </div>
+
             <a
               href="https://www.namohydrogen.com/"
               target="_blank"

@@ -70,7 +70,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
             style={{
               width: '100%',
               maxWidth: '1240px',
-              height: '68px',
+              minHeight: '68px',
+              height: 'auto',
               borderRadius: '9999px',
               backgroundColor: isScrolled
                 ? 'rgba(247, 245, 239, 0.92)'
@@ -84,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
-              padding: '0 1.75rem',
+              padding: '0.45rem 1.6rem',
               pointerEvents: 'auto',
               transition: 'all 0.4s ease',
             }}
@@ -95,8 +96,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.75rem',
+                gap: '0.65rem',
                 textDecoration: 'none',
+                minWidth: 0,
+                flexShrink: 1,
               }}
               data-cursor="NAMO"
             >
@@ -104,38 +107,51 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenEnquiry }) => {
                 src="/assets/namo-logo.png"
                 alt="NAMO Organic"
                 style={{
-                  height: '38px',
+                  height: 'clamp(32px, 3.8vw, 38px)',
                   width: 'auto',
                   objectFit: 'contain',
+                  flexShrink: 0,
                 }}
                 onError={(e) => {
                   e.currentTarget.style.display = 'none';
                 }}
               />
-              <div style={{ display: 'flex', flexDirection: 'column' }}>
+              <div
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  maxWidth: '340px',
+                  minWidth: 0,
+                  justifyContent: 'center',
+                }}
+              >
                 <span
                   className="font-display"
                   style={{
-                    fontSize: '1.25rem',
+                    fontSize: 'clamp(0.95rem, 1.35vw, 1.25rem)',
                     fontWeight: 800,
                     color: '#0C291B',
                     letterSpacing: '-0.02em',
-                    lineHeight: 1,
+                    lineHeight: 1.1,
+                    whiteSpace: 'nowrap',
                   }}
                 >
                   NAMO ORGANIC
                 </span>
                 <span
+                  className="navbar-brand-subtitle"
                   style={{
-                    fontSize: '0.62rem',
+                    fontSize: 'clamp(0.46rem, 0.88vw, 0.58rem)',
                     fontWeight: 700,
-                    letterSpacing: '0.12em',
+                    letterSpacing: '0.03em',
                     color: '#3B7E48',
                     textTransform: 'uppercase',
                     marginTop: '2px',
+                    lineHeight: 1.2,
+                    whiteSpace: 'normal',
                   }}
                 >
-                  Natural Agriculture
+                  Natural Agriculture &amp; Modern Organic Private Limited
                 </span>
               </div>
             </Link>
