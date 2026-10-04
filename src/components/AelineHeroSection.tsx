@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ArrowRight, Sprout } from 'lucide-react';
 
 interface AelineHeroSectionProps {
@@ -6,13 +6,6 @@ interface AelineHeroSectionProps {
 }
 
 export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnquiry }) => {
-  const [email, setEmail] = useState('');
-
-  const handleJoin = (e: React.FormEvent) => {
-    e.preventDefault();
-    onOpenEnquiry();
-  };
-
   const stats = [
     { value: 'US $24B+', label: 'Market Context', desc: 'Indian bio-agriculture market trajectory by 2026.' },
     { value: '40%', label: 'Water Conservation', desc: 'Cultivation water reduction with Panchakavya.' },
@@ -126,31 +119,51 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
               We unite communities, ideas, and actions to protect India's living soil and build a sustainable agricultural future for all.
             </p>
 
-            {/* Email Input Pill */}
-            <form onSubmit={handleJoin} className="aeline-input-pill" style={{ border: '1px solid rgba(59, 126, 72, 0.25)', boxShadow: '0 8px 25px rgba(20, 60, 36, 0.06)' }}>
-              <input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+            {/* CTA Action Buttons */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                flexWrap: 'wrap',
+                marginTop: '0.25rem',
+              }}
+            >
               <button
-                type="submit"
+                onClick={() => {
+                  const target = document.querySelector('#products');
+                  if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    window.location.href = '/products';
+                  }
+                }}
                 className="btn-aeline-green"
                 style={{
-                  padding: '0.75rem 1.6rem',
+                  padding: '0.85rem 1.85rem',
+                  fontSize: '0.92rem',
                   background: 'linear-gradient(135deg, #2E7D32 0%, #154D22 100%)',
-                  boxShadow: '0 4px 14px rgba(46, 125, 50, 0.35)',
+                  boxShadow: '0 6px 18px rgba(46, 125, 50, 0.35)',
                 }}
               >
-                <span>Join Us</span>
-                <ArrowRight size={15} />
+                <span>Explore Products</span>
+                <ArrowRight size={16} />
               </button>
-            </form>
+
+              <button
+                onClick={onOpenEnquiry}
+                className="aeline-btn-lime"
+                style={{
+                  padding: '0.85rem 1.75rem',
+                  fontSize: '0.92rem',
+                }}
+              >
+                <span>Enquire Now</span>
+              </button>
+            </div>
 
             {/* Social Proof Avatar Row with Real Farmer & Community Images */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', marginTop: '0.25rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', marginLeft: '0.25rem' }}>
                 <img
                   src="/assets/farmers.jpg"
@@ -210,7 +223,7 @@ export const AelineHeroSection: React.FC<AelineHeroSectionProps> = ({ onOpenEnqu
               </div>
 
               <span style={{ fontSize: '0.84rem', color: '#435848', fontWeight: 500 }}>
-                Join <strong style={{ color: '#0C291B' }}>15,000+</strong> farmers &amp; families making a difference
+                Trusted by <strong style={{ color: '#0C291B' }}>15,000+</strong> farmers &amp; families across India
               </span>
             </div>
           </div>
