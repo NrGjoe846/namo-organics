@@ -49,15 +49,16 @@ export const ValuePropositionSection: React.FC = () => {
       id="value-proposition"
       style={{
         backgroundColor: '#F7F5EF',
-        paddingTop: '6rem',
-        paddingBottom: '6.5rem',
+        paddingTop: 'clamp(4rem, 7vw, 6.5rem)',
+        paddingBottom: 'clamp(4rem, 7vw, 6.5rem)',
         position: 'relative',
         borderBottom: '1px solid rgba(23, 63, 43, 0.08)',
+        overflow: 'hidden',
       }}
     >
-      <div className="container-custom">
+      <div className="container-custom" style={{ position: 'relative', zIndex: 1 }}>
         {/* Section Header */}
-        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto 4rem' }}>
+        <div style={{ textAlign: 'center', maxWidth: '820px', margin: '0 auto clamp(2.5rem, 5vw, 4rem)' }}>
           <div className="aeline-tag" style={{ margin: '0 auto 1.25rem' }}>
             <Sparkles size={13} color="#3B7E48" />
             <span>OUR VALUE PROPOSITION</span>
@@ -66,14 +67,15 @@ export const ValuePropositionSection: React.FC = () => {
           <h2
             className="font-display"
             style={{
-              fontSize: 'clamp(2.4rem, 4.5vw, 3.8rem)',
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.8rem)',
               color: '#121E15',
               lineHeight: 1.1,
               letterSpacing: '-0.02em',
               fontWeight: 800,
+              margin: 0,
             }}
           >
-            Growing Value <span style={{ color: '#3B7E48' }}>From the Ground Up</span>
+            Growing Value <span style={{ color: '#2E7D32' }}>From the Ground Up</span>
           </h2>
 
           <div
@@ -92,7 +94,7 @@ export const ValuePropositionSection: React.FC = () => {
           <p
             style={{
               color: '#556557',
-              fontSize: '1.1rem',
+              fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)',
               lineHeight: 1.7,
               marginTop: '1rem',
             }}
@@ -103,33 +105,26 @@ export const ValuePropositionSection: React.FC = () => {
         </div>
 
         {/* 3 Value Columns with Integrated Photography */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '2rem',
-            marginBottom: '4rem',
-          }}
-          className="value-prop-grid"
-        >
+        <div className="value-prop-grid" style={{ marginBottom: 'clamp(2.5rem, 5vw, 4rem)' }}>
           {pillars.map((p, idx) => {
             const isMiddle = idx === 1;
             return (
               <div
                 key={p.num}
+                className={`value-card ${isMiddle ? 'card-highlighted' : ''}`}
                 style={{
                   backgroundColor: isMiddle ? '#0C291B' : '#FFFFFF',
                   color: isMiddle ? '#FFFFFF' : '#121E15',
-                  borderRadius: '32px',
-                  padding: '2.5rem 2.2rem',
-                  border: isMiddle ? '1px solid #0C291B' : '1px solid rgba(23, 63, 43, 0.1)',
+                  borderRadius: '28px',
+                  padding: 'clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2.2rem)',
+                  border: isMiddle ? '1px solid rgba(147, 198, 57, 0.3)' : '1px solid rgba(23, 63, 43, 0.1)',
                   boxShadow: isMiddle
                     ? '0 25px 50px -12px rgba(12, 41, 27, 0.35)'
                     : '0 10px 30px -10px rgba(0, 0, 0, 0.04)',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
-                  transition: 'transform 0.3s ease',
+                  transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
                   position: 'relative',
                   overflow: 'hidden',
                 }}
@@ -139,7 +134,7 @@ export const ValuePropositionSection: React.FC = () => {
                   <div
                     style={{
                       position: 'relative',
-                      height: '140px',
+                      height: 'clamp(140px, 18vw, 160px)',
                       borderRadius: '20px',
                       overflow: 'hidden',
                       marginBottom: '1.5rem',
@@ -148,17 +143,19 @@ export const ValuePropositionSection: React.FC = () => {
                     <img
                       src={p.image}
                       alt={p.title}
+                      className="value-img"
                       style={{
                         width: '100%',
                         height: '100%',
                         objectFit: 'cover',
+                        transition: 'transform 0.4s ease',
                       }}
                     />
                     <div
                       style={{
                         position: 'absolute',
                         inset: 0,
-                        background: 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 100%)',
+                        background: 'linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%)',
                       }}
                     />
                     <div
@@ -183,6 +180,7 @@ export const ValuePropositionSection: React.FC = () => {
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
+                          boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
                         }}
                       >
                         {p.num}
@@ -202,7 +200,7 @@ export const ValuePropositionSection: React.FC = () => {
                           fontWeight: 800,
                           padding: '0.25rem 0.65rem',
                           borderRadius: '9999px',
-                          backgroundColor: 'rgba(255, 255, 255, 0.92)',
+                          backgroundColor: 'rgba(255, 255, 255, 0.94)',
                           color: '#0C291B',
                           letterSpacing: '0.05em',
                         }}
@@ -214,10 +212,10 @@ export const ValuePropositionSection: React.FC = () => {
 
                   <div
                     style={{
-                      fontSize: '0.78rem',
+                      fontSize: '0.75rem',
                       fontWeight: 800,
-                      color: isMiddle ? '#93C639' : '#B79A5B',
-                      letterSpacing: '0.06em',
+                      color: isMiddle ? '#93C639' : '#3B7E48',
+                      letterSpacing: '0.08em',
                       textTransform: 'uppercase',
                       marginBottom: '0.35rem',
                     }}
@@ -226,9 +224,10 @@ export const ValuePropositionSection: React.FC = () => {
                   </div>
 
                   <h3
+                    className="font-display"
                     style={{
-                      fontSize: '1.35rem',
-                      fontWeight: 700,
+                      fontSize: 'clamp(1.2rem, 1.8vw, 1.45rem)',
+                      fontWeight: 750,
                       color: isMiddle ? '#FFFFFF' : '#121E15',
                       marginBottom: '0.85rem',
                       lineHeight: 1.25,
@@ -240,7 +239,7 @@ export const ValuePropositionSection: React.FC = () => {
 
                   <p
                     style={{
-                      fontSize: '0.92rem',
+                      fontSize: '0.9rem',
                       lineHeight: 1.65,
                       color: isMiddle ? '#C9D4CA' : '#556557',
                       marginBottom: '1.5rem',
@@ -256,7 +255,7 @@ export const ValuePropositionSection: React.FC = () => {
                     borderTop: isMiddle ? '1px solid rgba(255, 255, 255, 0.12)' : '1px solid rgba(23, 63, 43, 0.08)',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '0.55rem',
+                    gap: '0.65rem',
                   }}
                 >
                   {p.points.map((pt, pidx) => (
@@ -287,7 +286,7 @@ export const ValuePropositionSection: React.FC = () => {
             backgroundColor: '#FFFFFF',
             border: '1px solid rgba(23, 63, 43, 0.12)',
             borderRadius: '24px',
-            padding: '1.25rem 2rem',
+            padding: 'clamp(1rem, 2.5vw, 1.35rem) clamp(1.2rem, 3vw, 2rem)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -300,10 +299,11 @@ export const ValuePropositionSection: React.FC = () => {
               flexWrap: 'wrap',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '0.75rem 1.75rem',
-              fontSize: '0.9rem',
+              gap: '0.5rem 1.25rem',
+              fontSize: 'clamp(0.78rem, 1.4vw, 0.9rem)',
               fontWeight: 700,
               color: '#0C291B',
+              textAlign: 'center',
             }}
           >
             <span>Healthy Soil</span>
@@ -318,6 +318,46 @@ export const ValuePropositionSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <style>{`
+        .value-prop-grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 2rem;
+        }
+
+        .value-card:hover {
+          transform: translateY(-6px);
+        }
+
+        .value-card.card-highlighted:hover {
+          box-shadow: 0 30px 60px -10px rgba(12, 41, 27, 0.5) !important;
+          border-color: rgba(147, 198, 57, 0.5) !important;
+        }
+
+        .value-card:not(.card-highlighted):hover {
+          box-shadow: 0 20px 45px -10px rgba(12, 41, 27, 0.1) !important;
+          border-color: rgba(59, 126, 72, 0.3) !important;
+        }
+
+        .value-card:hover .value-img {
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 1024px) {
+          .value-prop-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+          }
+        }
+
+        @media (max-width: 640px) {
+          .value-prop-grid {
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+          }
+        }
+      `}</style>
     </section>
   );
 };
