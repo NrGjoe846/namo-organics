@@ -91,8 +91,8 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onSelectServic
             FOR HEALTHY SOIL • THRIVING FARMERS • A GREENER TOMORROW
           </span>
           <h2
-            className="font-heading"
-            style={{ fontSize: 'clamp(2rem, 3.8vw, 3rem)', color: '#173F2B', marginTop: '0.25rem' }}
+            className="font-display"
+            style={{ fontSize: 'clamp(2rem, 3.8vw, 3rem)', color: '#173F2B', fontWeight: 800, marginTop: '0.25rem' }}
           >
             Our Comprehensive Services
           </h2>

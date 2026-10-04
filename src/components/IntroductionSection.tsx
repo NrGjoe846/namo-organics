@@ -117,10 +117,11 @@ export const IntroductionSection: React.FC = () => {
                 WHO WE ARE
               </span>
               <h2
-                className="font-heading"
+                className="font-display"
                 style={{
                   fontSize: 'clamp(2rem, 3.8vw, 3rem)',
                   color: '#173F2B',
+                  fontWeight: 800,
                   lineHeight: 1.15,
                   marginTop: '0.25rem',
                 }}

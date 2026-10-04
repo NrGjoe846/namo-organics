@@ -45,12 +45,12 @@ export const VisionMissionSection: React.FC = () => {
             NATURAL SOLUTIONS FOR A BETTER TOMORROW
           </span>
           <h2
-            className="font-heading"
-            style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', color: '#173F2B', marginTop: '0.25rem' }}
+            className="font-display"
+            style={{ fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', color: '#0C291B', fontWeight: 800, marginTop: '0.25rem' }}
           >
             Vision &amp; Mission
           </h2>
-          <p style={{ color: '#667067', fontSize: '1rem', marginTop: '0.5rem' }}>
+          <p style={{ color: '#556557', fontSize: '1rem', marginTop: '0.5rem' }}>
             Growing together for a greener tomorrow with nature-inspired agricultural inputs.
           </p>
         </div>
@@ -67,16 +67,26 @@ export const VisionMissionSection: React.FC = () => {
           {/* Vision Card */}
           <div
             style={{
-              backgroundColor: '#173F2B',
-              color: '#FCFAF4',
-              padding: '3rem 2.5rem',
-              borderRadius: '24px',
+              backgroundColor: '#0C291B',
+              color: '#FFFFFF',
+              padding: 'clamp(2rem, 4vw, 3rem) clamp(1.75rem, 3.5vw, 2.5rem)',
+              borderRadius: '26px',
               position: 'relative',
               overflow: 'hidden',
-              boxShadow: '0 20px 40px -10px rgba(23, 63, 43, 0.25)',
+              boxShadow: '0 20px 40px -10px rgba(12, 41, 27, 0.3)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              transition: 'transform 0.35s ease, box-shadow 0.35s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-6px)';
+              e.currentTarget.style.boxShadow = '0 25px 50px -10px rgba(12, 41, 27, 0.45)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(12, 41, 27, 0.3)';
             }}
           >
             <div
@@ -87,7 +97,8 @@ export const VisionMissionSection: React.FC = () => {
                 width: '240px',
                 height: '240px',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(183, 154, 91, 0.15) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(183, 154, 91, 0.2) 0%, transparent 70%)',
+                pointerEvents: 'none',
               }}
             />
             <div>
@@ -97,34 +108,41 @@ export const VisionMissionSection: React.FC = () => {
                   height: '52px',
                   borderRadius: '14px',
                   backgroundColor: 'rgba(183, 154, 91, 0.2)',
+                  border: '1px solid rgba(183, 154, 91, 0.35)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#B79A5B',
+                  color: '#D4AF37',
                   marginBottom: '1.5rem',
                 }}
               >
-                <Eye size={28} />
+                <Eye size={26} color="#D4AF37" />
               </div>
               <div
                 style={{
                   fontSize: '0.78rem',
-                  fontWeight: 700,
+                  fontWeight: 800,
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  color: '#B79A5B',
-                  marginBottom: '0.5rem',
+                  color: '#D4AF37',
+                  marginBottom: '0.65rem',
                 }}
               >
                 COMPANY VISION
               </div>
               <h3
-                className="font-heading"
-                style={{ fontSize: '1.75rem', color: '#FCFAF4', marginBottom: '1rem' }}
+                className="font-display"
+                style={{
+                  fontSize: 'clamp(1.5rem, 2.2vw, 1.85rem)',
+                  fontWeight: 800,
+                  color: '#FFFFFF',
+                  marginBottom: '1rem',
+                  lineHeight: 1.2,
+                }}
               >
                 Sustainable Cultivation For Future Generations
               </h3>
-              <p style={{ color: '#DFD3B6', fontSize: '1.05rem', lineHeight: 1.7 }}>
+              <p style={{ color: '#C9D4CA', fontSize: '1rem', lineHeight: 1.68 }}>
                 To promote the transition towards organic and sustainable cultivation for the health, growth and well-being of future generations.
               </p>
             </div>
@@ -132,9 +150,10 @@ export const VisionMissionSection: React.FC = () => {
               style={{
                 marginTop: '2rem',
                 paddingTop: '1.25rem',
-                borderTop: '1px solid rgba(223, 211, 182, 0.2)',
+                borderTop: '1px solid rgba(255, 255, 255, 0.12)',
                 fontSize: '0.8rem',
-                color: '#A8B89F',
+                fontWeight: 600,
+                color: '#93C639',
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
               }}
@@ -146,16 +165,26 @@ export const VisionMissionSection: React.FC = () => {
           {/* Mission Card */}
           <div
             style={{
-              backgroundColor: '#3F6B45',
-              color: '#FCFAF4',
-              padding: '3rem 2.5rem',
-              borderRadius: '24px',
+              backgroundColor: '#173F2B',
+              color: '#FFFFFF',
+              padding: 'clamp(2rem, 4vw, 3rem) clamp(1.75rem, 3.5vw, 2.5rem)',
+              borderRadius: '26px',
               position: 'relative',
               overflow: 'hidden',
-              boxShadow: '0 20px 40px -10px rgba(63, 107, 69, 0.25)',
+              boxShadow: '0 20px 40px -10px rgba(23, 63, 43, 0.3)',
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'space-between',
+              border: '1px solid rgba(147, 198, 57, 0.2)',
+              transition: 'transform 0.35s ease, box-shadow 0.35s ease',
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'translateY(-6px)';
+              e.currentTarget.style.boxShadow = '0 25px 50px -10px rgba(23, 63, 43, 0.45)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'translateY(0)';
+              e.currentTarget.style.boxShadow = '0 20px 40px -10px rgba(23, 63, 43, 0.3)';
             }}
           >
             <div
@@ -166,7 +195,8 @@ export const VisionMissionSection: React.FC = () => {
                 width: '240px',
                 height: '240px',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(245, 241, 231, 0.2) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(147, 198, 57, 0.2) 0%, transparent 70%)',
+                pointerEvents: 'none',
               }}
             />
             <div>
@@ -175,35 +205,42 @@ export const VisionMissionSection: React.FC = () => {
                   width: '52px',
                   height: '52px',
                   borderRadius: '14px',
-                  backgroundColor: 'rgba(245, 241, 231, 0.2)',
-                  display: 'center',
+                  backgroundColor: 'rgba(147, 198, 57, 0.18)',
+                  border: '1px solid rgba(147, 198, 57, 0.35)',
+                  display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#FCFAF4',
+                  color: '#93C639',
                   marginBottom: '1.5rem',
                 }}
               >
-                <Target size={28} />
+                <Target size={26} color="#93C639" />
               </div>
               <div
                 style={{
                   fontSize: '0.78rem',
-                  fontWeight: 700,
+                  fontWeight: 800,
                   letterSpacing: '0.15em',
                   textTransform: 'uppercase',
-                  color: '#FCFAF4',
-                  marginBottom: '0.5rem',
+                  color: '#93C639',
+                  marginBottom: '0.65rem',
                 }}
               >
                 COMPANY MISSION
               </div>
               <h3
-                className="font-heading"
-                style={{ fontSize: '1.75rem', color: '#FCFAF4', marginBottom: '1rem' }}
+                className="font-display"
+                style={{
+                  fontSize: 'clamp(1.5rem, 2.2vw, 1.85rem)',
+                  fontWeight: 800,
+                  color: '#FFFFFF',
+                  marginBottom: '1rem',
+                  lineHeight: 1.2,
+                }}
               >
                 Empowering Farmers With Organic Inputs
               </h3>
-              <p style={{ color: '#FCFAF4', fontSize: '1.05rem', lineHeight: 1.7, opacity: 0.95 }}>
+              <p style={{ color: '#DCE8DF', fontSize: '1rem', lineHeight: 1.68 }}>
                 To work with farmers to promote the use of organic fertilizers and sustainable agricultural practices, thereby contributing to the country's agricultural growth and development.
               </p>
             </div>
@@ -211,10 +248,10 @@ export const VisionMissionSection: React.FC = () => {
               style={{
                 marginTop: '2rem',
                 paddingTop: '1.25rem',
-                borderTop: '1px solid rgba(252, 250, 244, 0.2)',
+                borderTop: '1px solid rgba(255, 255, 255, 0.12)',
                 fontSize: '0.8rem',
-                color: '#FCFAF4',
-                opacity: 0.9,
+                fontWeight: 600,
+                color: '#93C639',
                 letterSpacing: '0.08em',
                 textTransform: 'uppercase',
               }}
@@ -243,8 +280,8 @@ export const VisionMissionSection: React.FC = () => {
               FROM DEGRADED SOIL TO A HEALTHIER TOMORROW
             </span>
             <h3
-              className="font-heading"
-              style={{ fontSize: '2.1rem', color: '#173F2B', marginTop: '0.25rem' }}
+              className="font-display"
+              style={{ fontSize: '2.1rem', color: '#173F2B', fontWeight: 800, marginTop: '0.25rem' }}
             >
               The Agricultural Challenges We Solve
             </h3>
