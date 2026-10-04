@@ -5,6 +5,7 @@ import { PageHeroHeader } from '../components/PageHeroHeader';
 import { PetalGrowthSections } from '../components/PetalGrowthSections';
 import { ProductShowcaseSection } from '../components/ProductShowcaseSection';
 import { PanchakavyaSection } from '../components/PanchakavyaSection';
+import { PetNutritionSection } from '../components/PetNutritionSection';
 import { ServicesSection } from '../components/ServicesSection';
 import { FinalCTASection } from '../components/FinalCTASection';
 import { Footer } from '../components/Footer';
@@ -46,13 +47,16 @@ export const ProductsPage: React.FC = () => {
         {/* 02. In-Depth Formulation Deep Dives & Agronomic Technical Specifications */}
         <ProductShowcaseSection onOpenEnquiryWithProduct={handleOpenEnquiryWithProduct} />
 
-        {/* 03. Panchakavya 5-Ingredient Deep Dive & Science */}
+        {/* 03. Organic Pet Nutrition & Veterinary Wellness Showcase */}
+        <PetNutritionSection onOpenEnquiryWithProduct={handleOpenEnquiryWithProduct} />
+
+        {/* 04. Panchakavya 5-Ingredient Deep Dive & Science */}
         <PanchakavyaSection />
 
-        {/* 04. 9 Comprehensive Services & Field Agronomic Advisory */}
+        {/* 05. 9 Comprehensive Services & Field Agronomic Advisory */}
         <ServicesSection onSelectService={(srv) => handleOpenEnquiryWithProduct(srv)} />
 
-        {/* 05. Call to Action */}
+        {/* 06. Call to Action */}
         <FinalCTASection onOpenEnquiry={handleOpenGeneralEnquiry} />
       </main>
 

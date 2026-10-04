@@ -387,6 +387,16 @@ export const ContactSection: React.FC = () => {
                     <option value="NAMO Heritage Rice & Whole Wheat Grains">NAMO Heritage Rice &amp; Whole Wheat Grains</option>
                     <option value="NAMO Organic Whole Spices & Powders">NAMO Organic Whole Spices &amp; Powders</option>
                     <option value="NAMO Premium Dry Fruits & Nuts">NAMO Premium Dry Fruits &amp; Nuts</option>
+                    <option value="NAMO Elite for Adult Dogs">NAMO Elite for Adult Dogs</option>
+                    <option value="NAMO Elite for Cats">NAMO Elite for Cats (Grain-Free)</option>
+                    <option value="NAMO Elite for Mother & Baby">NAMO Elite for Mother &amp; Baby</option>
+                    <option value="NAMO Xcite for Stud Dogs">NAMO Xcite for Stud Dogs</option>
+                    <option value="NAMO Xcite for Lactating Females">NAMO Xcite for Lactating Females</option>
+                    <option value="NAMO Pets Addon for Healthy Cats">NAMO Pets Addon for Healthy Cats</option>
+                    <option value="NAMO Pets Addon for Weight Gain">NAMO Pets Addon for Weight Gain</option>
+                    <option value="NAMO Fish Oil">NAMO Fish Oil (Pure Omega 3-6-9)</option>
+                    <option value="NAMO Fish Bone Chew">NAMO Fish Bone Chew (Dental Care)</option>
+                    <option value="NAMO Fish Tail Chew">NAMO Fish Tail Chew (Collagen Rich)</option>
                     <option value="Dealership & Distribution">Dealership &amp; Regional Distribution</option>
                     <option value="FPO Partnership / Institutional Procurement">FPO Partnership / Institutional Procurement</option>
                     <option value="E-commerce / Merchant Trading">E-commerce / Merchant Export Trading</option>

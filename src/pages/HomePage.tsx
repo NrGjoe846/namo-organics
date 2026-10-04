@@ -6,6 +6,7 @@ import { AelineMissionSection } from '../components/AelineMissionSection';
 import { TerravaSections } from '../components/TerravaSections';
 import { PetalGrowthSections } from '../components/PetalGrowthSections';
 import { PanchakavyaSection } from '../components/PanchakavyaSection';
+import { PetNutritionSection } from '../components/PetNutritionSection';
 import { FounderSection } from '../components/FounderSection';
 import { AelineInitiativesSection } from '../components/AelineInitiativesSection';
 import { FinalCTASection } from '../components/FinalCTASection';
@@ -54,7 +55,10 @@ export const HomePage: React.FC = () => {
         {/* 05. PANCHAKAVYA 5-INGREDIENT COW-DERIVED SCIENCE & 40% WATER SAVING */}
         <PanchakavyaSection />
 
-        {/* 06. FOUNDER'S VISION & LEADERSHIP PERSPECTIVE */}
+        {/* 06. ORGANIC PET NUTRITION & WELLNESS SECTION */}
+        <PetNutritionSection onOpenEnquiryWithProduct={handleOpenEnquiryWithProduct} />
+
+        {/* 07. FOUNDER'S VISION & LEADERSHIP PERSPECTIVE */}
         <FounderSection onOpenEnquiry={handleOpenGeneralEnquiry} />
 
         {/* 07. INITIATIVES & LIME ACCENT NEWSLETTER */}

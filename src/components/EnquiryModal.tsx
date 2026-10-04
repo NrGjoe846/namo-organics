@@ -399,6 +399,18 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                             NAMO Premium Dry Fruits &amp; Nuts
                           </option>
                         </optgroup>
+                        <optgroup label="Organic Pet Care & Veterinary Nutrition">
+                          <option value="NAMO Elite for Adult Dogs">NAMO Elite for Adult Dogs</option>
+                          <option value="NAMO Elite for Cats">NAMO Elite for Cats (Grain-Free)</option>
+                          <option value="NAMO Elite for Mother & Baby">NAMO Elite for Mother &amp; Baby</option>
+                          <option value="NAMO Xcite for Stud Dogs">NAMO Xcite for Stud Dogs</option>
+                          <option value="NAMO Xcite for Lactating Females">NAMO Xcite for Lactating Females</option>
+                          <option value="NAMO Pets Addon for Healthy Cats">NAMO Pets Addon for Healthy Cats</option>
+                          <option value="NAMO Pets Addon for Weight Gain">NAMO Pets Addon for Weight Gain</option>
+                          <option value="NAMO Fish Oil">NAMO Fish Oil (Pure Omega 3-6-9)</option>
+                          <option value="NAMO Fish Bone Chew">NAMO Fish Bone Chew (Dental Care)</option>
+                          <option value="NAMO Fish Tail Chew">NAMO Fish Tail Chew (Collagen Rich)</option>
+                        </optgroup>
                         <optgroup label="Institutional & Partnerships">
                           <option value="Dealership & Distribution">
                             Dealership &amp; Regional Distribution
