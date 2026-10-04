@@ -302,7 +302,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                       ref={nameInputRef}
                       type="text"
                       required
-                      placeholder="e.g. Ramesh Kumar"
+                      placeholder="Enter your full name"
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       className="enquiry-input"
@@ -322,7 +322,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                           id="enquiry-phone"
                           type="tel"
                           required
-                          placeholder="98765 43210"
+                          placeholder="Enter 10-digit phone number"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
                           className="enquiry-input enquiry-input-phone"
@@ -339,7 +339,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                         id="enquiry-email"
                         type="email"
                         required
-                        placeholder="name@domain.com"
+                        placeholder="Enter your email address"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         className="enquiry-input"
@@ -438,7 +438,7 @@ export const EnquiryModal: React.FC<EnquiryModalProps> = ({
                     <textarea
                       id="enquiry-message"
                       rows={3}
-                      placeholder="Tell us about your farm, crop type, quantity, location, or specific enquiry..."
+                      placeholder="Enter your message or specific requirements..."
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       className="enquiry-textarea"

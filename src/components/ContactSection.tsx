@@ -299,7 +299,7 @@ export const ContactSection: React.FC = () => {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. Ramesh Kumar"
+                    placeholder="Enter your full name"
                     value={fullName}
                     onChange={(e) => setFullName(e.target.value)}
                     style={{
@@ -322,7 +322,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       type="tel"
                       required
-                      placeholder="+91 98765 43210"
+                      placeholder="Enter 10-digit phone number"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
                       style={{
@@ -344,7 +344,7 @@ export const ContactSection: React.FC = () => {
                     <input
                       type="email"
                       required
-                      placeholder="ramesh@example.com"
+                      placeholder="Enter your email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       style={{
@@ -410,7 +410,7 @@ export const ContactSection: React.FC = () => {
                   </label>
                   <textarea
                     rows={3}
-                    placeholder="Tell us about your crops, acreage, supply volume or partnership interest..."
+                    placeholder="Enter your message or requirements..."
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     style={{
