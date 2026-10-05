@@ -22,7 +22,7 @@ export const AelineInitiativesSection: React.FC<AelineInitiativesSectionProps> =
       tag: 'Crop Defense',
       title: 'Organic Pesticides, Better Harvest',
       desc: 'Eco-friendly, chemical-free crop protection shielding plants from pests and fungi while preserving pollinator bees.',
-      image: '/assets/hero-products.jpg',
+      image: '/assets/namo-organic-pesticide-bottle.png',
       stat: '100% Non-Toxic',
       icon: ShieldCheck,
     },

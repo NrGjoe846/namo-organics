@@ -25,7 +25,7 @@ export const TargetCustomersSection: React.FC = () => {
       desc: 'Establishing local dealership networks across districts and villages, expanding availability of high-grade bio-fertilizers and pest solutions.',
       points: ['Regional exclusivity', 'Competitive margin structures', 'Marketing & technical support'],
       icon: Truck,
-      image: '/assets/hero-products.jpg',
+      image: '/assets/ecosystem-distributors.jpg',
     },
     {
       title: 'Consumers',
@@ -33,7 +33,7 @@ export const TargetCustomersSection: React.FC = () => {
       desc: 'Connecting conscious consumers with healthy, chemical-free farm products, cold-pressed oils, and desi cow ghee.',
       points: ['100% natural foods', 'Nourishing Indian families', 'Direct farm transparency'],
       icon: Heart,
-      image: '/assets/product-ghee.jpg',
+      image: '/assets/ecosystem-consumers.jpg',
     },
     {
       title: 'B2C Channels',
@@ -41,7 +41,7 @@ export const TargetCustomersSection: React.FC = () => {
       desc: 'Serving retail households directly through packaged organic staples, edible oils, and daily kitchen essentials.',
       points: ['Premium packaging', 'Convenient home delivery', 'Pure native ingredients'],
       icon: ShoppingBag,
-      image: '/assets/product-oil.jpg',
+      image: '/assets/ecosystem-b2c.jpg',
     },
     {
       title: 'E-commerce & Digital',
@@ -49,7 +49,7 @@ export const TargetCustomersSection: React.FC = () => {
       desc: 'Expanding digital access to certified organic fertilizers, pest solutions, and food products across India.',
       points: ['24/7 web access', 'Nationwide logistics', 'Transparent product information'],
       icon: Globe,
-      image: '/assets/dals-overhead.jpg',
+      image: '/assets/ecosystem-ecommerce.jpg',
     },
   ];
 

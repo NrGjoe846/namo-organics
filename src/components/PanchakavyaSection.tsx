@@ -12,7 +12,7 @@ export const PanchakavyaSection: React.FC = () => {
       desc: 'A traditional component providing bio-active enzymes that accelerate microbial propagation in soil.',
       benefit: 'Stimulates root hair multiplication and beneficial fungal mycorrhizae.',
       badge: 'Proteins & Sugars',
-      image: '/assets/product-ghee.jpg',
+      image: '/assets/panchakavya-milk.jpg',
     },
     {
       name: 'Urine',
@@ -30,7 +30,7 @@ export const PanchakavyaSection: React.FC = () => {
       desc: 'A traditional agricultural ingredient that restores degraded soil organic matter and moisture retention.',
       benefit: 'Supplies billion+ colony-forming units (CFUs) of aerobic soil bacteria.',
       badge: 'Humic Microbes',
-      image: '/assets/nature-soil.jpg',
+      image: '/assets/panchakavya-dung.png',
     },
     {
       name: 'Curd',
@@ -39,7 +39,7 @@ export const PanchakavyaSection: React.FC = () => {
       desc: 'Delivers beneficial probiotic microbes that naturally suppress harmful soil-borne pathogens and fungi.',
       benefit: 'Maintains optimal rhizosphere pH for increased micronutrient uptake.',
       badge: 'Probiotic LAB',
-      image: '/assets/product-honey.jpg',
+      image: '/assets/panchakavya-curd.png',
     },
     {
       name: 'Ghee',
