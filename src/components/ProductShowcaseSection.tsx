@@ -59,7 +59,7 @@ export const ProductShowcaseSection: React.FC<ProductShowcaseSectionProps> = ({
       category: 'oils',
       categoryLabel: 'WOOD-PRESSED (CHEKKU)',
       name: 'NAMO Cold-Pressed Native Edible Oils',
-      tagline: 'Virgin Olive, Mustard, Coconut, Groundnut, Sunflower & Sesame Oils',
+      tagline: 'Virgin Olive, Coconut, Groundnut, Sunflower & Sesame Oils',
       desc: 'Traditional wood-pressed pure native edible oils extracted under low temperatures without chemical solvents, retaining 100% vital fatty acids, natural aroma, and essential vitamins.',
       features: [
         'Cold-pressed (Chekku / Kachi Ghani) extraction',

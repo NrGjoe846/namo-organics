@@ -51,7 +51,7 @@ export const PetalGrowthSections: React.FC<PetalGrowthSectionsProps> = ({
       id: 3,
       name: 'NAMO Cold-Pressed Native Edible Oils',
       category: 'Cold-Pressed Edible Oils',
-      tag: 'Virgin Olive • Mustard • Coconut • Groundnut • Sunflower • Sesame',
+      tag: 'Virgin Olive • Coconut • Groundnut • Sunflower • Sesame',
       badge: 'Wood-Pressed (Chekku)',
       image: '/assets/namo-cold-pressed-edible-oils.png',
       desc: 'Traditional wood-pressed (Kachi Ghani) pure unrefined edible oils extracted without heat or chemical refining, retaining 100% natural antioxidants, aroma, and omega fatty acids.',
